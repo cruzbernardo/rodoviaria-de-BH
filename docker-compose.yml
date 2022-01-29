@@ -4,8 +4,8 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: process.env.DATABASE_PASSWORD
+      POSTGRES_PASSWORD: "${DATABASE_PASSWORD}"
     ports:
       - "5432:5432"
     volumes:
-      - process.env.DATABASE_DOCKERVOLUME 
+      - /c/ProgramirNode/aprendendo-nest/var/lib/postgresql/data
